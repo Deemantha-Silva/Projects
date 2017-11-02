@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="FinalProjectJava.jnlp">
+  <information>
+    <title>FinalProjectJava</title>
+    <vendor>Deemantha</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="FinalProjectJava.jar" size="395501" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="FinalProjectJava" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="finalprojectjava.FinalProjectJava"  name="FinalProjectJava" />
+  <update check="always"/>
+</jnlp>

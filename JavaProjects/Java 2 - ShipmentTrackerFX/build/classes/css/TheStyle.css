@@ -1,0 +1,30 @@
+/**
+ * Deemantha Silva
+ * 991455124
+ * Assignment 3
+ * March 19, 2017
+ */
+
+.root{
+    -fx-background-color: linear-gradient(#D0D3D4, #FDFEFE);
+}
+
+.label{
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+.vbox{
+    -fx-padding: 20;
+}
+
+.button{
+    -fx-padding: 1 40 1 40;
+    -fx-font-size: 12px;
+    -fx-text-fill: firebrick;
+}
+
+.btn1{
+    -fx-padding: 1 48 1 48;
+}

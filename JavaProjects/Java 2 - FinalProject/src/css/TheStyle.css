@@ -1,0 +1,33 @@
+/* 
+    Created on : 5-Apr-2017, 8:43:35 PM
+    Author     : Deemantha
+*/
+
+.root{
+    -fx-background-color: linear-gradient(#267871,#136a8a);
+}
+
+.label{
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+    -fx-padding: 4px;
+}
+
+.text-area{
+    -fx-font-size: 14px;
+    -fx-border-color: black;
+}
+
+.btn{
+    -fx-font-size: 11px;
+    -fx-padding: 5 20 20 10;
+    -fx-spacing: 2;
+    -fx-hgap: 20.0;
+    -fx-vgap: 10.0;
+    -fx-alignment: CENTER;
+}
+
+.vb{
+    -fx-padding: 0 10 0 10;
+}
