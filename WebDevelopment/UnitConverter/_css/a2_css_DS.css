@@ -1,0 +1,56 @@
+#heading{
+	position: relative;
+	width: 50%;
+	left: 25%;
+	background-color: gainsboro;
+	border-style: solid;
+	border-width: 5px;
+	border-color: black;
+	font-family: "Times New Roman";
+	font-size: 30px;
+	padding: 1%;
+}
+#sLine{
+	position: relative;
+	top: 0%;
+	border: 1%;
+	height: 2px;
+	background-color: black;
+}
+
+#background{
+	background-color: ghostwhite;
+	
+}
+
+input[type=text]{
+	width:40%;
+	font-size: 20px;
+}
+
+input[type=reset]{
+	width:41%;
+	background-color:red;
+	height: 5%;
+	font-size: 15px;
+}
+
+input[type=button]{
+	width:10%;
+	background-color: limegreen;
+	color: black;
+	font-size: 15px;
+	height: 5%;
+}
+
+#display{
+	position: relative;
+	display: none;
+	background-color:white;
+	border: solid black;
+	font-size: 20px;
+	width: 37%;
+	padding: 2%;
+	height: 8%;
+	left: 29.5%;
+}

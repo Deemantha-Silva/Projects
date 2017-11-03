@@ -1,0 +1,143 @@
+#bg
+{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	
+	
+}
+
+#header
+{
+	position: fixed;
+	background-image: url("../_img/sam.png");
+	background-size: cover;
+	background-position: 50% 10%;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+#title
+{
+	position: absolute;
+	font-family: Georgia, serif;
+	font-size: 32px;
+	color: #F1C40F;
+	left: 5%;
+	top: 3%;
+}
+
+#title2
+{
+	position: absolute;
+	font-family: Georgia, serif;
+	font-size: 20px;
+	color: #F1C40F;
+	right: 3%;
+	top: 7%;
+}
+
+body
+{
+	overflow: hidden;
+}
+
+#table1
+{
+	position: absolute;
+	top: 30%;
+	left: 10%;
+	height: 40%;
+	width: 80%;
+	background-color: white;
+}
+
+td
+{	
+	padding: 2%;
+}
+
+#first
+{
+	position: relative;
+	top: -10px;
+	left: 5%;
+}
+
+#col1
+{
+	position: relative;
+	left: 5%;
+	top: -5px;
+}
+
+#second
+{
+	position: relative;
+	top: -25px;
+	left: 5%;
+}
+
+#col2
+{
+	position: relative;
+	left: 5%;
+	top: -20px;
+}
+
+#third
+{
+	position: relative;
+	top: -25px;
+	left: 5%;
+}
+
+#col3
+{
+	position: relative;
+	left: 5%;
+	top: -18px;
+}
+input
+{
+	margin-bottom: 5px;
+	width: 90%;
+}
+
+select
+{
+	margin-bottom: 10px;
+	width: 90%;
+}
+
+table
+{
+	border-collapse: collapse;
+	background: linear-gradient(#FDFEFE, #D5DBDB);
+}
+#subForm
+{
+	position: absolute;
+	top: 71%;
+	left: 68%;
+	width: 10%;
+	background-color: #F1C40F;
+}
+
+#clearForm
+{
+	position: absolute;
+	top: 71%;
+	left: 80%;
+	width: 10%;
+	background-color: #F1C40F;
+}
+
+#clearForm
+button
+{
+		z-index: 1;
+}

@@ -1,0 +1,237 @@
+#bg
+{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	
+	
+}
+
+body{
+		background: 2px 2px linear-gradient(black, #EAECEE);
+}
+
+#header
+{
+	position: fixed;
+	background-image: url("../_img/sam.png");
+	background-size: cover;
+	background-position: 50% 10%;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 20%;
+	z-index: 1;
+}
+
+#title
+{
+	position: absolute;
+	font-family: Georgia, serif;
+	font-size: 32px;
+	color: #F1C40F;
+	left: 5%;
+	top: 3%;
+}
+
+#title2
+{
+	position: absolute;
+	font-family: Georgia, serif;
+	font-size: 20px;
+	color: #F1C40F;
+	right: 3%;
+	top: 30%;
+}
+
+#item1
+{
+	position: absolute;
+	top: 25%;
+	left: 10%;
+	width: 700px;
+	height: 150px;
+	background: 2px 2px linear-gradient(#FDFEFE, #E5E7E9);
+	border: 1px solid black;
+	
+}
+
+#item1Font
+{
+	font-size: 18px;
+}
+
+#tContainer
+{
+	position: absolute;
+	border: 1px solid black;
+	height: 150px;
+	width: 50px;
+	z-index: 1;
+	top: 25%;
+	left: 6.3%;
+	
+}
+
+#tContainerA
+{
+	position: absolute;
+	border: 1px solid black;
+	height: 150px;
+	width: 50px;
+	z-index: 1;
+	top: 55%;
+	left: 6.3%;
+	
+}
+
+#leftPane
+{
+	position: absolute;
+	top: 40%;
+}
+
+#rightPane
+{
+	position: absolute;
+	top: 40%;
+	right: 78.5%;
+}
+
+#leftPaneA
+{
+	position: absolute;
+	top: 40%;
+}
+
+#rightPaneA
+{
+	position: absolute;
+	top: 40%;
+	right: 78.5%;
+}
+
+.heading
+{
+	opacity: 0.5;
+}
+
+.thumb
+{
+	height: 50px;
+	width: 50px;
+}
+
+#item2
+{
+	position: absolute;
+	top: 55%;
+	left: 10%;
+	width: 700px;
+	background: 2px 2px linear-gradient(#FDFEFE, #E5E7E9);
+	border: 1px solid black;
+	
+}
+
+#item2Font
+{
+	font-size: 18px;
+}
+
+
+.priceStyle
+{
+	color: #E74C3C;
+}
+
+img
+{
+	height: 150px;
+	width: 150px;
+	float: left;
+}
+
+#swordTitle
+{
+	position: relative;
+	top: 5%;
+	left: 2%;
+	right: 2%;
+}
+
+#swordPrice
+{
+	font-size: 12px;
+}
+
+#qty1
+{
+		position: relative;
+		top: 0%;
+		left: 50%;
+}
+
+#armorTitle
+{
+	position: relative;
+	top: 10px;
+	left: 2%;
+	right: 2%;
+}
+
+#armorPrice
+{
+	font-size: 12px;
+}
+
+#qty2
+{
+		position: relative;
+		top: 10%;
+		left: 50%;
+}
+#itemContainer
+{
+	position: absolute;
+	overflow: hidden;
+	width: 25%;
+	left: 68%;
+	height: 75%;
+	top: 22%;
+	z-index: 1;
+}
+#items
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: linear-gradient(#FDFEFE, #E5E7E9);
+}
+
+table
+{
+		border-collapse: collapse;
+		border: 2px 2px black;
+}
+
+
+th
+{
+	background-color: #F1C40F;
+	color: black;
+}
+
+input[type=number]{
+	width: 20%;
+}
+
+#reCalc, #re, #feedback
+{
+	position: relative;
+	left: 3.5%;
+	background-color: #F1C40F;
+	width: 100px;
+	
+}

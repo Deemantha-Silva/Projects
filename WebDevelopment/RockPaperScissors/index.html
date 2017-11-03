@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<title>Assignment 1 for Deemantha Silva</title>
+	
+	</head>
+	<body>
+	<h1 align="center">Assignment 1 <br> Deemantha Silva <br> Instructor: Amandeep Kaur</h1>
+	
+	<hr>
+
+	<script>
+	var compChoices = ["Rock", "Paper", "Scissor"];
+	var win = 0;
+	var loss = 0;
+	var again = 0;
+	
+while(again >= 0){
+	var repeat = true;
+	while (repeat == true){
+	var userPick = prompt("Pick: Rock, Paper, or Scissor");
+	var searchArray = compChoices.indexOf(userPick);
+	if (searchArray >= 0){
+	repeat = false;
+	}
+	else{
+	repeat = true;
+	}
+	}
+	alert("You have picked " + userPick);
+	
+	var compPick = compChoices[Math.floor(Math.random() * compChoices.length)];
+	alert("The computer has picked " + compPick);
+	
+	
+	if (userPick == "Paper" & compPick == "Rock"){
+		win = win + 1;
+		alert("Win! --Total wins: " + win)
+	}
+	else if (userPick == "Paper" & compPick == "Scissor"){
+		alert("Loss")
+		loss = loss + 1;
+	}
+	else if (userPick == "Rock" & compPick == "Paper"){
+		alert("Loss")
+		loss = loss + 1;
+	}
+	else if (userPick == "Rock" & compPick == "Scissor"){
+		win = win + 1;
+		alert("Win! --Total wins: " + win)
+	}
+	else if (userPick == "Scissor" & compPick == "Rock"){
+		alert("Loss")
+		loss = loss + 1;
+	}
+	else if (userPick == "Scissor" & compPick == "Paper"){
+		win = win + 1;
+		alert("Win! --Total wins: " + win)
+		}
+	else{
+		alert("Tie!");
+	}
+	
+	var nextRound = confirm("Continue?");
+	if (nextRound == true){
+	again = again + 1;
+	}
+	else{
+		if(win>loss){
+		alert("You've won " + win + " game(s) and lost " + loss + " game(s). You beat the computer!");
+		}
+		else if (win == loss){
+		alert("You've won " + win + " game(s) and lost " + loss + " game(s). You tied the computer");
+		}
+		else{
+		alert("You've won " + win + " game(s) and lost " + loss + " game(s). You lost to the computer");
+		}		
+		again = -1;
+	}
+	}
+	
+	
+	
+
+	
+	</script>
+	</body>
+</html>

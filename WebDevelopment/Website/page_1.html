@@ -1,0 +1,145 @@
+<html>
+<head>
+<title>Shopping Cart</title>
+	<link rel="stylesheet" type="text/css" href="_css/page_1_css.css">
+	<script type="text/javascript" src="_scripts/page_1.js"></script>
+</head>
+
+<body onload="promoCode();">
+<div id="header">
+	<p id="title">JapanMartialEquipments.com<br>Product Listings</p>
+	<p id="title2"><i>Elite Katanas and Samurai Armor for Great Prices!</i></p>
+	</div>
+	<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+		<div id="item1">
+			<img id="img1"src="_img/item_1/sword1.jpg">
+			<div id="leftPane"><input class ="heading" type="button" onclick="showKatana(-1)" value="&lt;"></div>
+			<div id="RightPane"><input class ="heading" type="button" onclick="showKatana(1)" value="&gt;"></div>
+			<span id="swordTitle">
+			<span id="item1Font"><b> Tokugawa Era Blue Steel Katana</b><br>
+			This Tokugawa Era Katana was forged on Mount Fuji by <br>Legendary Master Swordsmith Muramasa.<br>
+			Package comes with Blue Steel Katana, Muramasa Stamped Sheath,<br>
+			Purple Silk Carrying Case. Certificate of Authenticity included.<br></span>
+			<i id="swordPrice">Price: <b class="priceStyle">$1399.99</b> + Tax</i></span><br>
+			<span id="qty1"> Qty: <input id="katanaQty" type="number" value="0" min="0" max="5"> </span>
+		</div>
+		<div id="tContainer">
+			<img class="thumb" id="0" src="_img/item_1/sword1.jpg">
+			<img class="thumb" id="1" src="_img/item_1/sword2.jpg">
+			<img class="thumb" id="2" src="_img/item_1/sword3.jpg">
+		</div>
+		
+		<div id="item2">
+			<img id="img2"src="_img/item_2/armor_1.jpg">
+			<div id="leftPaneA"><input class ="heading" type="button" onclick="showArmor(-1)" value="&lt;"></div>
+			<div id="RightPaneA"><input class ="heading" type="button" onclick="showArmor(1)" value="&gt;"></div>
+			<span id="armorTitle">
+			<span id="item2Font"><b>Tokugawa Era Imperial Samurai Armor</b><br>
+			This Tokugawa Era Armor was forged on in Old Kyoto<br>
+			Commissioned for use under the Emperor, Ieyasu Tokugawa.<br>
+			Package includes Helmet, Body Armor, Gauntlets, Leg Armor, and Boots.<br>
+			Certificate of Authenticity included.<br></span>
+			<i id="armorPrice">Price: <b class="priceStyle">$2999.99</b> + Tax</i></span><br>
+			<span id="qty2"> Qty: <input id="armorQty" type="number" value="0" min="0" max="5"></span>
+		</div>	
+		<div id="tContainerA">
+			<img class="thumb" id="3" src="_img/item_2/armor_1thumb.jpg">
+			<img class="thumb" id="4" src="_img/item_2/armor_2thumb.jpg">
+			<img class="thumb" id="5" src="_img/item_2/armor_3thumb.jpg">
+		</div>
+		<div id="itemContainer">
+		<table id="items" border="1">
+			<th>Checkout Cart</th>
+			<tr>
+				<td id="qItems">Item Qty: 0</td>
+			<tr>
+				<td>
+				Shipping:<br> 
+				<input class="shipping" name="ship" id="shipCheck" type="radio" value="4.99" checked="checked">Standard ($4.99)<br>
+				<input class="shipping" name="ship" id="shipUncheck" type="radio" value="19.99">Expedited ($19.99)
+				</td>
+			</tr>	
+			<tr>
+				<td>
+				Gift Wrapping:<br>
+				<input class="wrapping" name="wrap" id="giftCheck" type="radio" value="0" checked="checked">No Thanks!<br>
+				<input class="wrapping" name="wrap" id="giftUncheck" type="radio" value="9.99">Yes, Please!($9.99)
+				</td>			
+			</tr>
+			<tr>
+				<td>
+				Insurance:<br>
+				<input class="insurance" name="ins" id="insCheck" type="radio" value="0" checked="checked">No Thanks!<br>
+				<input class="insurance" name="ins" id="insUncheck" type="radio" value="1">Yes (fee of 10% of total items before tax)
+				</td>			
+			</tr>
+			<tr>
+				<td>
+				Membership:<br>
+				<input class="membership" name="member" id="memCheck" type="radio" value="0" checked="checked">Sign Me Up!<br>
+				<input class="membership" name="member" id="memUncheck" type="radio" value="0">No Thanks!
+				</td>			
+			</tr>
+			<tr>
+				<td>
+				Promo Code: <b id="pCode"></b><br>
+				Enter Promo to save ($200):
+				<input type = "text" id="enterPromo">
+				</td>
+			</tr>
+			<tr>
+				<td id="subtotal">Subtotal: $0</td>
+			</tr>
+			<tr>
+				<td id="tax">Tax (13%): $0</td>
+			</tr>
+			<tr>
+				<td id="promo">Promo: $0</td>
+			</tr>
+			<tr>
+				<td id="total">Total: $0</td>
+			</tr>
+			<tr>
+				<td>
+				<input id="reCalc" type="button" value="Recalculate" onclick="iPrices()">
+				<input id="re" type="reset" value = "Reset" onclick="totalReset()">
+				<input id="feedback" type="button" value="Submit" onclick="submitFeed()">
+				</td>
+			</tr>
+		</table>
+		</div>
+
+	</form>
+	
+	<?php
+if($_SERVER['REQUEST_METHOD']=="POST")
+{
+	$User=$_POST['uname'];
+	$Pass=$_POST['pwd'];
+	$Fname=$_POST['fname'];
+	$Lname=$_POST['lname'];
+	$Email=$_POST['email'];
+	$Phone=$_POST['phone'];
+	$Addr=$_POST['addr'];
+	$link=mysqli_connect("localhost","root","","shopcart");
+	$result=mysqli_query($link,"select * from signup where username='".$User."'");
+	if($rows=mysqli_num_rows($result)>0)
+	{
+		echo "<script>alert('User already registered');</script>";
+		//header("location: signup.html");
+	}
+	else
+	{
+		if(mysqli_query($link,"insert into signup
+		(username,password,firstname,lastname,email,phone,addr) 
+		values('".$User."','".$Pass."','".$Fname."','".$Lname."','".
+		$Email."',".$Phone.",'".$Addr."')"))
+		{
+			echo "<script>alert('User registered successfully');</script>";
+			//header("location: product.html");
+		}
+	}
+?>
+		
+</body>
+</html>

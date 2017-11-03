@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Feeback Submission</title>
+	<link rel="stylesheet" type="text/css" href="_css/page_2_css.css">
+	<script type="text/javascript" src="_scripts/page_2.js"></script>
+</head>
+
+<body>
+<div id="header">
+	<p id="title">JapanMartialEquipments.com<br> Feedback Submission</p>
+	<p id="title2"><i>Best Place to Buy Japanese <br>Martial Arts Equipment Online</i></p>
+	</div>
+	<form id="form1">
+		<table id="table1" border="1">
+		<tr>
+			<td>
+				<h2 id="col1">Personal Information</h2>
+				<div id="first">
+				First Name: <br>
+				<input type="text" id="fName" required autofocus placeholder="ex: John"><br>
+				Last Name: <br>
+				<input type="text" id="lName" required placeholder="ex: Smith"><br>
+				Email: <br>
+				<input type="email" id="mail" required placeholder="ex: j.smith@gmail.ca"><br>
+				Phone: <br>
+				<input type="tel" id="phone" placeholder="(xxx)-xxx-xxxx">	
+				</div>
+			</td>
+			<td>
+				<h2 id="col2">Shopping Experience</h2>
+				<div id="second">
+				Rate our Products: <br>
+				<select>
+					<option value="Undefined">- -</option>
+					<option value="1 Star">1 Star</option>
+					<option value="2 Stars">2 Stars</option>
+					<option value="3 Stars">3 Stars</option>
+					<option value="4 Stars">4 Stars</option>
+					<option value="5 Star">5 Stars</option>
+				</select><br>
+				Rate our Prices:<br>
+				<select>
+					<option value="Undefined">- -</option>
+					<option value="1 Star">1 Star</option>
+					<option value="2 Stars">2 Stars</option>
+					<option value="3 Stars">3 Stars</option>
+					<option value="4 Stars">4 Stars</option>
+					<option value="5 Star">5 Stars</option>
+				</select><br>
+				Rate our Website: <br>
+				<select>
+					<option value="Undefined">- -</option>
+					<option value="1 Star">1 Star</option>
+					<option value="2 Stars">2 Stars</option>
+					<option value="3 Stars">3 Stars</option>
+					<option value="4 Stars">4 Stars</option>
+					<option value="5 Star">5 Stars</option>
+				</select>
+				</div>
+			</td>
+			<td>
+				<h2 id="col3">Comments</h2>
+				<div id="third">
+				We'd love to hear from you! Please write us some feedback:<br> 
+				<textarea id="comments" rows="8" cols="55"></textarea>
+				</div>
+			</td>
+		</tr>
+		</table>
+		<input type="submit" id="subForm" value="Submit" onclick="feedbackSubmit()">
+		<input type="button" id="clearForm" value="Clear" onclick="clearFeedback()">
+	</form>
+
+</body>
+<html>
